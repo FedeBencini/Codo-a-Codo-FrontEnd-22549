@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulario</title>
-</head>
-
-<body>
-  <h1>Formulario 1</h1>
-  <form action="">
-    <label for="">Nombre:</label>
-    <input type="text" maxlength="20" size="20" />
-    <label for="">Password:</label>
-    <input type="password" maxlength="4" size="4" />
-    <input type="submit" value="Enviar" />
-  </form>
-  <h1>Formulario 2</h1>
-  <form action="">
-    <input type="checkbox" value="Música"/>
-    <label for="">Opción 1</label>
-    <input type="checkbox" value="Serie"/>
-    <label for="">Opción 2</label>
-    <br>
-    <label>Opción A</label>
-    <input type="radio" value="A" name="Opciones A/B">
-    <label>Opción B</label>
-    <input type="radio" value="B" name="Opciones A/B">
-  </form>
-  <br>
-  <p>Ir a <a href="index.html">Index</a></p>
-  <p>Ir a <a href="about.html">about</a></p>
-</body>
-
+  <body>
+    <h1>Formulario 1</h1>
+    <form action="registrar-formulario.html" method="POST">
+      <label for="">Nombre:</label>
+      <input type="text" maxlength="50" size="20" name="username" />
+      <label for="">Password:</label>
+      <input type="password" maxlength="4" size="4" name="password" />
+      <input type="submit" value="Enviar" />
+    </form>
+    <h1>Formulario 2</h1>
+    <form action="registrar-formulario.html" method="POST">
+      <input type="checkbox" value="Música" />
+      <label for="">Opción 1</label>
+      <input type="checkbox" value="Serie" />
+      <label for="">Opción 2</label>
+      <br />
+      <label>Opción A</label>
+      <input type="radio" value="A" name="Opciones A/B" />
+      <label>Opción B</label>
+      <input type="radio" value="B" name="Opciones A/B" />
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+    <form action="">
+      <table>
+        <tr>
+          <td>Nombre:</td>
+          <td><input type="text" name="nombre" /></td>
+        </tr>
+        <tr>
+          <td>Fecha Nac.:</td>
+          <td><input type="date" name="nacimiento" max="2004-08-16" /></td>
+        </tr>
+        <tr>
+          <td>Edad mascota:</td>
+          <td><input type="number" name="edad-masc" min="0" max="50" /></td>
+        </tr>
+      </table>
+    </form>
+    <hr />
+    <p>Ir a <a href="index.html">Index</a></p>
+    <p>Ir a <a href="about.html">about</a></p>
+  </body>
 </html>
