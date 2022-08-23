@@ -1,0 +1,21 @@
+h1 {
+  color: rgb(128, 20, 20);
+  font-size: 40px;
+}
+h2 {
+  color: blue;
+  font-weight: 800;
+}
+p {
+  color: green;
+  background-color: beige;
+}
+/* Class and Id */
+/* Multiple selectors with "," */
+.newSection, #firstP {
+  background-color: red;
+}
+
+.aquaBack {
+  background-color: aqua;
+}
