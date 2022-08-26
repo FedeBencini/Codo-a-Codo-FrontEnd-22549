@@ -1,0 +1,34 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+/*
+Distintas maneras de editar algunos tags especÃ­ficos segÃºn atributo
+
+Atributo igual a x
+[atributo="x"]
+
+Atributo empieza con x
+[atributo^="x"]
+
+Atributo termina con x
+[atributo$="x"]
+*/
+
+[id$="Sec"] {
+  text-align: center;
+}
+.white_font {
+  color: white;
+}
+#firstSec {
+  background-color: brown;
+  width: 300px;
+  height: 250px;
+  padding-top: 5px;
+}
+#secondSec {
+  background-color: blue;
+}
+#important {
+  background-color: yellow;
+}
