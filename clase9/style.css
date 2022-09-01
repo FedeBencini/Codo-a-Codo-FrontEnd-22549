@@ -1,0 +1,71 @@
+p > strong {
+  color: red;
+}
+
+div > img {
+  width: 300px;
+}
+
+div.div1 p {
+  font-size: 15px;
+}
+
+h1 + p {
+  background-color: blueviolet;
+}
+
+a:visited {
+  color: brown;
+}
+
+a:active {
+  color: turquoise;
+}
+
+img:hover {
+  filter: brightness(2);
+  transition: 0.1s;
+}
+
+input:checked {
+  margin: 10px;
+}
+
+div.primerhijo {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+div.primerhijo p {
+  display: inline;
+}
+
+div.primerhijo p:first-child {
+  color: blueviolet;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+div.primerhijo p:last-child {
+  color: blue;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+div.primerhijo p:nth-child(even) {
+  background-color: deeppink;
+}
+
+.ordlist li:nth-child(odd) {
+  color: white;
+  background-color: turquoise;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.ordlist li:nth-child(2) {
+  color: gold;
+  background-color: white;
+  font-size: 24px;
+  font-weight: bolder;
+}
