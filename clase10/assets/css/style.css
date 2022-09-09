@@ -1,0 +1,11 @@
+.container {
+  background-color: aqua;
+  padding: 5px;
+}
+
+.container div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: beige;
+}
