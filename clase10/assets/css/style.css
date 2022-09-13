@@ -57,13 +57,63 @@ html {
 }
 */
 
+body,
+header,
 main {
   display: flex;
   flex-flow: column nowrap;
 }
 
+header,
 section {
+  height: 100vh;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: beige;
+}
+
+.menu-container ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.menu-container ul a,
+#home {
+  height: 50px;
+  width: 70px;
+  padding: auto 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: darkslategrey;
+  text-align: center;
+  line-height: 50px;
+}
+
+.menu-container ul a:hover,
+#home:hover {
+  background-color: darkslategray;
+  color: beige;
+  transition: 0.25s;
+}
+
+header nav {
+  position: sticky;
+  top: 0;
+}
+
+header img {
+  width: 100%;
   height: 650px;
+}
+
+/* Sections */
+
+section {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -94,8 +144,8 @@ section a {
   display: inline-block;
   width: 70px;
   height: 30px;
-  background-color: blanchedalmond;
-  color: darkgreen;
+  background-color: darkslategray;
+  color: beige;
   text-decoration: none;
   text-align: center;
   line-height: 30px;
@@ -104,8 +154,9 @@ section a {
 
 section a:hover {
   font-weight: bold;
-  color: blanchedalmond;
-  background-color: darkgreen;
+  color: darkslategray;
+  background-color: beige;
+  transition: 0.25s;
 }
 
 @media screen and (max-width: 1000px) {
