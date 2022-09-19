@@ -1,0 +1,14 @@
+#main {
+  background-color: cyan;
+  min-height: 100%;
+}
+
+.leftCol {
+  height: 400px;
+  background-color: aquamarine;
+}
+
+.rightCol {
+  height: 400px;
+  background-color: crimson;
+}
