@@ -7,57 +7,42 @@
     <title>Clase14</title>
     <script src="./js/ejercicio.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <main>
-      <section>
-        <div>
-          <h1>Calculadora</h1>
-          <!-- Operando 1 -->
-          <label for="op1"></label>
-          <input id="op1" type="number" />
+  <body class="container-fluid vh-100 d-flex align-items-center">
+    <main class="container d-flex flex-column h-75 w-25 align-items-center">
+      <div class="container my-5">
+        <!-- Operando 1 -->
+        <label for="op1"></label>
+        <input id="op1" type="number" />
 
-          <!-- Operación Matemática -->
-          <label for="operacion"></label>
-          <input id="operacion" type="text" />
+        <!-- Operación Matemática -->
+        <label for="operacion"></label>
+        <input id="operacion" type="text" />
 
-          <!-- Operando 1 -->
-          <label for="op2"></label>
-          <input id="op2" type="number" />
+        <!-- Operando 1 -->
+        <label for="op2"></label>
+        <input id="op2" type="number" />
 
-          <!-- resultado -->
-          <label>=</label>
-          <label id="resultado"></label>
-        </div>
-        <div>
-          <!-- Realizar cálculo -->
-          <button onclick="calcular()">Calcular</button>
-          <button onclick="borrar()">Borrar</button>
-        </div>
-      </section>
-      <section>
-        <div class="calculadora-container">
-          <div class="numeros-container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>0</div>
-          </div>
-          <div class="operaciones-container">
-            <div>+</div>
-            <div>-</div>
-            <div>*</div>
-            <div>/</div>
-            <div>=</div>
-          </div>
-        </div>
-      </section>
+        <!-- resultado -->
+        <label>=</label>
+        <label id="resultado"></label>
+      </div>
+      <div>
+        <!-- Realizar cálculo -->
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="borrar()">Borrar</button>
+      </div>
     </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
