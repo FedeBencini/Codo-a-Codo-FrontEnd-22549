@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clase14</title>
-    <script src="./js/ejercicio.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./assets/js/ejercicio.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,28 +15,128 @@
     />
   </head>
   <body class="container-fluid vh-100 d-flex align-items-center">
-    <main class="container d-flex flex-column h-75 w-25 align-items-center">
-      <div class="container my-5">
-        <!-- Operando 1 -->
-        <label for="op1"></label>
-        <input id="op1" type="number" />
-
-        <!-- Operación Matemática -->
-        <label for="operacion"></label>
-        <input id="operacion" type="text" />
-
-        <!-- Operando 1 -->
-        <label for="op2"></label>
-        <input id="op2" type="number" />
-
-        <!-- resultado -->
-        <label>=</label>
-        <label id="resultado"></label>
+    <main
+      class="container d-flex flex-column h-75 align-items-center"
+      id="calculator"
+    >
+      <div
+        id="pantalla"
+        class="w-100 m-3 h-25 d-flex justify-content-end align-items-end"
+      >
+        <p class="fw-semibold pe-3">0</p>
       </div>
-      <div>
-        <!-- Realizar cálculo -->
-        <button onclick="calcular()">Calcular</button>
-        <button onclick="borrar()">Borrar</button>
+      <div id="botones" class="w-100 mx-3 mb-3 h-75 d-flex">
+        <div id="nums" class="col-9">
+          <div class="d-flex flex-column h-100">
+            <div id="CEyC" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones"
+              >
+                CE
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones"
+              >
+                C
+              </div>
+            </div>
+            <div id="unoATres" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                1
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                2
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                3
+              </div>
+            </div>
+            <div id="cuatroASeis" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                4
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                5
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                6
+              </div>
+            </div>
+            <div id="sieteANueve" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                7
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                8
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                9
+              </div>
+            </div>
+            <div id="ceroYVacio" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center"
+              ></div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+              >
+                0
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="operaciones" class="col-3">
+          <div class="d-flex flex-column h-100">
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+            >
+              /
+            </div>
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+            >
+              *
+            </div>
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+            >
+              -
+            </div>
+            <div
+              class="col d-flex justify-content-center align-items-center botones"
+            >
+              +
+            </div>
+            <div
+              id="igual"
+              class="col d-flex justify-content-center align-items-center botones"
+            >
+              =
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <script
