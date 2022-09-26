@@ -21,9 +21,13 @@
     >
       <div
         id="pantalla"
-        class="w-100 m-3 h-25 d-flex justify-content-end align-items-end"
+        class="w-100 m-3 h-25 d-flex flex-column justify-content-end"
       >
-        <p class="fw-semibold pe-3">0</p>
+        <div
+          id="parcial"
+          class="col d-flex pe-3 justify-content-end align-items-end"
+        ></div>
+        <div id="resultado" class="col fw-semibold pe-3 text-end">0</div>
       </div>
       <div id="botones" class="w-100 mx-3 mb-3 h-75 d-flex">
         <div id="nums" class="col-9">
@@ -31,64 +35,75 @@
             <div id="CEyC" class="d-flex col">
               <div
                 class="col d-flex justify-content-center align-items-center botones"
+                onclick="borrarParteInf()"
               >
                 CE
               </div>
               <div
                 class="col d-flex justify-content-center align-items-center botones"
+                onclick="borrarTodo()"
               >
                 C
-              </div>
-            </div>
-            <div id="unoATres" class="d-flex col">
-              <div
-                class="col d-flex justify-content-center align-items-center botones numeros"
-              >
-                1
-              </div>
-              <div
-                class="col d-flex justify-content-center align-items-center botones numeros"
-              >
-                2
-              </div>
-              <div
-                class="col d-flex justify-content-center align-items-center botones numeros"
-              >
-                3
-              </div>
-            </div>
-            <div id="cuatroASeis" class="d-flex col">
-              <div
-                class="col d-flex justify-content-center align-items-center botones numeros"
-              >
-                4
-              </div>
-              <div
-                class="col d-flex justify-content-center align-items-center botones numeros"
-              >
-                5
-              </div>
-              <div
-                class="col d-flex justify-content-center align-items-center botones numeros"
-              >
-                6
               </div>
             </div>
             <div id="sieteANueve" class="d-flex col">
               <div
                 class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('7')"
               >
                 7
               </div>
               <div
                 class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('8')"
               >
                 8
               </div>
               <div
                 class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('9')"
               >
                 9
+              </div>
+            </div>
+            <div id="cuatroASeis" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('4')"
+              >
+                4
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('5')"
+              >
+                5
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('6')"
+              >
+                6
+              </div>
+            </div>
+            <div id="unoATres" class="d-flex col">
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('1')"
+              >
+                1
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('2')"
+              >
+                2
+              </div>
+              <div
+                class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('3')"
+              >
+                3
               </div>
             </div>
             <div id="ceroYVacio" class="d-flex col">
@@ -97,6 +112,7 @@
               ></div>
               <div
                 class="col d-flex justify-content-center align-items-center botones numeros"
+                onclick="agregarNum('0')"
               >
                 0
               </div>
@@ -111,27 +127,32 @@
           <div class="d-flex flex-column h-100">
             <div
               class="col d-flex justify-content-center align-items-center botones"
+              onclick="division()"
             >
               /
             </div>
             <div
               class="col d-flex justify-content-center align-items-center botones"
+              onclick="multiplicacion()"
             >
               *
             </div>
             <div
               class="col d-flex justify-content-center align-items-center botones"
+              onclick="resta()"
             >
               -
             </div>
             <div
               class="col d-flex justify-content-center align-items-center botones"
+              onclick="suma()"
             >
               +
             </div>
             <div
               id="igual"
               class="col d-flex justify-content-center align-items-center botones"
+              onclick="calcular()"
             >
               =
             </div>

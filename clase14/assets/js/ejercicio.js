@@ -1,47 +1,85 @@
 /* Calculadora */
 
-function calcular() {
-//inicio
+/*  BUSCAR BUGS  */
 
-  let op1;
-  let op2;
-  let operacion;
-  let resultado;
+/* Variables */
+let primerValor;
+let segundoValor;
+let operacion;
 
-  //leer op1
-  op1 = parseInt(document.getElementById('op1').value);
-  operacion = document.getElementById('operacion').value;
-  op2 = parseInt(document.getElementById('op2').value);
-
-  if (operacion !== '+' && operacion !== '-' && operacion !== '*' && operacion !== '/') {
-    console.log('Enter a valid operation: + or - or * or /')
+/* Funciones para modificar temporalmente #resultado */
+function agregarNum(n) {
+  let valorParcial = document.getElementById('resultado').innerHTML;
+  if (valorParcial === '0') {
+    valorParcial = n;
+  } else if (valorParcial.length < 8) {
+    valorParcial = valorParcial + n;
   }
+  document.getElementById('resultado').innerHTML = valorParcial;
+}
+/* Funciones para guardar valor */
+function guardarValor(signo) {
+  primerValor = +(document.getElementById('resultado').innerHTML);
+  operacion = signo;
+  document.getElementById('parcial').innerHTML = primerValor + " " + signo;  
+  document.getElementById('resultado').innerHTML = '0';
+}
 
+function suma() {
+  guardarValor('+')
+}
+
+function resta() {
+  guardarValor('-')
+}
+
+function multiplicacion() {
+  guardarValor('*')
+}
+
+function division() {
+  guardarValor('/')
+}
+
+function guardarSegValor() {
+  segundoValor = +(document.getElementById('resultado').innerHTML);
+}
+
+/* Funcion para calcular resultado */
+
+function calcular() {
+  guardarSegValor();
+  let resultado;
   if (operacion === '+') {
-    resultado = op1+op2
+    resultado = primerValor + segundoValor;
   } else if (operacion === '-') {
-    resultado = op1-op2
+    resultado = primerValor - segundoValor;
   } else if (operacion === '*') {
-    resultado = op1*op2
+    resultado = primerValor * segundoValor;
   } else if (operacion === '/') {
-    if (op2 !== 0) {
-      resultado = op1/op2
+    if (segundoValor !== 0) {
+      resultado = primerValor / segundoValor;
     } else {
       document.getElementById('resultado').innerHTML = 'No se puede dividir por 0'
     }
   };
-
   if (resultado) {
     document.getElementById('resultado').innerHTML = resultado;
+    finParteSup();
   }
-
-//fin
 }
 
-function borrar() {
-  //op1
-  document.getElementById('op1').value='';
-  document.getElementById('operacion').value='';
-  document.getElementById('op2').value='';
-  document.getElementById('resultado').innerHTML='';
+/* Funciones para borrar números */
+
+function finParteSup() {
+  document.getElementById('parcial').innerHTML = primerValor + " " + signo + " " + segundoValor + " " + "=";
+}
+
+function borrarParteInf() {
+  document.getElementById('resultado').innerHTML = '0';
+}
+
+function borrarTodo() {
+  document.getElementById('parcial').innerHTML = '';
+  document.getElementById('resultado').innerHTML = '0';
 }
