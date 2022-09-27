@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase16</title>
+    <script src="./assets/js/script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section>
+      <h2>Notas</h2>
+      <label for="nota1">Nota1</label>
+      <input id="nota1" type="number" min="0" max="10" />
+      <label for="nota2">Nota2</label>
+      <input id="nota2" type="number" min="0" max="10" />
+      <button onclick="calcularNotas()">Calcular Notas</button>
+    </section>
+    <section>
+      <h2>Resultados</h2>
+      Menor: <label for="" id="menor"></label>
+      <br />
+      Mayor: <label for="" id="mayor"></label>
+      <br />
+      Suma: <label for="" id="suma"></label>
+      <br />
+      Promedio: <label for="" id="promedio"></label>
+      <br />
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
