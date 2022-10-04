@@ -1,7 +1,5 @@
 /* CALCULADORA */
 
-// Terminar linea 66 como redondear !! codingem
-
 /* Variables */  //x ej:
 let primerValor;     // 2
 let operacion;       // +
@@ -18,7 +16,7 @@ function agregarNum(n) {
   let valorParcial = document.getElementById('resultado').innerHTML;
   if (valorParcial === '0') {
     valorParcial = n;
-  } else if (valorParcial.length < 8) {
+  } else if (valorParcial.length < 14) {
     valorParcial += n;
   }
   document.getElementById('resultado').innerHTML = valorParcial;
@@ -38,11 +36,17 @@ function guardarSegValor() {
   document.getElementById('parcial').innerHTML = (primerValor + " " + operacion + " " + segundoValor + " =");
 }
 
-/* Funcion para redondear correctamente resultado */
+/* Funciones para redondear correctamente resultado */
 Number.prototype.round = function(n) {
   const d = Math.pow(10, n);
-  return Math.round((this + Number.EPSILON) +d ) / d;
+  return Math.round((this + Number.EPSILON) * d) / d;
 }
+
+function countComa(s) {
+  let newArray = s.split('.');
+  return newArray[0].length;
+}
+
 
 /* Funcion para calcular resultado */
 function calcular() {
@@ -63,7 +67,11 @@ function calcular() {
   };
   if (resultado) {
     finished = true;
-    document.getElementById('resultado').innerHTML = resultado.round(8);
+    const reString = resultado.toString();
+    if(reString.length > 14) {
+      resultado = resultado.round(14-(countComa(reString)));
+    }
+    document.getElementById('resultado').innerHTML = resultado;
   }
 }
 
