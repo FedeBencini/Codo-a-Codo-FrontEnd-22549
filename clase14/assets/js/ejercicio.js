@@ -1,5 +1,7 @@
 /* CALCULADORA */
 
+// Terminar linea 66 como redondear !! codingem
+
 /* Variables */  //x ej:
 let primerValor;     // 2
 let operacion;       // +
@@ -36,6 +38,11 @@ function guardarSegValor() {
   document.getElementById('parcial').innerHTML = (primerValor + " " + operacion + " " + segundoValor + " =");
 }
 
+/* Funcion para redondear correctamente resultado */
+Number.prototype.round = function(n) {
+  const d = Math.pow(10, n);
+  return Math.round((this + Number.EPSILON) +d ) / d;
+}
 
 /* Funcion para calcular resultado */
 function calcular() {
@@ -56,7 +63,7 @@ function calcular() {
   };
   if (resultado) {
     finished = true;
-    document.getElementById('resultado').innerHTML = resultado;
+    document.getElementById('resultado').innerHTML = resultado.round(8);
   }
 }
 
