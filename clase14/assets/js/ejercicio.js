@@ -1,52 +1,43 @@
-/* Calculadora */
+/* CALCULADORA */
 
-/*  BUSCAR BUGS  */
-
-/* Variables */
-let primerValor;
-let segundoValor;
-let operacion;
+/* Variables */  //x ej:
+let primerValor;     // 2
+let operacion;       // +
+let segundoValor;    // 3
+//           resultado: 5
+let finished = false;
 
 /* Funciones para modificar temporalmente #resultado */
 function agregarNum(n) {
+  if (finished) {
+    borrarTodo();
+    finished = false;
+  }
   let valorParcial = document.getElementById('resultado').innerHTML;
   if (valorParcial === '0') {
     valorParcial = n;
   } else if (valorParcial.length < 8) {
-    valorParcial = valorParcial + n;
+    valorParcial += n;
   }
   document.getElementById('resultado').innerHTML = valorParcial;
 }
+
 /* Funciones para guardar valor */
 function guardarValor(signo) {
+  finished = false;
   primerValor = +(document.getElementById('resultado').innerHTML);
   operacion = signo;
-  document.getElementById('parcial').innerHTML = primerValor + " " + signo;  
+  document.getElementById('parcial').innerHTML = primerValor + " " + operacion;  
   document.getElementById('resultado').innerHTML = '0';
-}
-
-function suma() {
-  guardarValor('+')
-}
-
-function resta() {
-  guardarValor('-')
-}
-
-function multiplicacion() {
-  guardarValor('*')
-}
-
-function division() {
-  guardarValor('/')
 }
 
 function guardarSegValor() {
   segundoValor = +(document.getElementById('resultado').innerHTML);
+  document.getElementById('parcial').innerHTML = (primerValor + " " + operacion + " " + segundoValor + " =");
 }
 
-/* Funcion para calcular resultado */
 
+/* Funcion para calcular resultado */
 function calcular() {
   guardarSegValor();
   let resultado;
@@ -64,22 +55,17 @@ function calcular() {
     }
   };
   if (resultado) {
+    finished = true;
     document.getElementById('resultado').innerHTML = resultado;
-    finParteSup();
   }
 }
 
 /* Funciones para borrar números */
-
-function finParteSup() {
-  document.getElementById('parcial').innerHTML = primerValor + " " + signo + " " + segundoValor + " " + "=";
-}
-
 function borrarParteInf() {
   document.getElementById('resultado').innerHTML = '0';
 }
 
 function borrarTodo() {
   document.getElementById('parcial').innerHTML = '';
-  document.getElementById('resultado').innerHTML = '0';
+  borrarParteInf();
 }
