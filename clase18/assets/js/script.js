@@ -32,6 +32,7 @@ function delValue(x) {
   getValue(x) = '';
 }
 
+
 function renderKeys() {
   const list = getElement('claves');
   //delInnerHTML(list);
