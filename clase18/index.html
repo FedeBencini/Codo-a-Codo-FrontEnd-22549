@@ -6,22 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clase18</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <main>
-      <section>
-        <h1>Clave:</h1>
-        <input type="text" id="clave" />
-        <button id="btnAdd">Agregar</button>
-        <button id="btnDel">Borrar</button>
-        <button id="btnDelAll">Borrar Todo</button>
+    <main class="container vh-100 d-flex flex-column align-items-center p-2">
+      <section class="container d-flex flex-column align-items-center mb-5">
+        <h1 class="text-center mb-4">Clave:</h1>
+        <input type="text" id="clave" class="form-control w-75 mb-4" />
+        <div class="container d-flex w-75 mb-4">
+          <button id="btnAdd" class="btn btn-dark col me-1">Agregar</button>
+          <button id="btnDel" class="btn btn-dark col">Borrar</button>
+          <button id="btnDelAll" class="btn btn-dark col ms-1">
+            Borrar Todo
+          </button>
+        </div>
       </section>
-      <section>
+      <section class="container d-flex flex-column">
         <h3>Claves:</h3>
         <div id="claves"></div>
       </section>
     </main>
     <script src="./assets/js/script.js"></script>
-    <!-- <script src="./try.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
