@@ -2,13 +2,13 @@
 const btnAdd = document.getElementById('btnAdd');
 const btnDel = document.getElementById('btnDel');
 const btnDelAll = document.getElementById('btnDelAll');
-const claves = [];
+let claves = [];
 
 //
 // funciones de base
 function renderKeys() {
   const list = getElement('claves');
-  delInnerHTML('claves');
+  list.innerHTML = '';
   // crear ul
   const ul = document.createElement('ul');
   ul.id = 'clavesUl';
@@ -46,14 +46,6 @@ function getValue(x) {
   return document.getElementById(x).value;
 }
 
-function delInnerHTML(x) {
-  getInnerHTML(x) = '';
-}
-
-function delValue(x) {
-  getValue(x) = '';
-}
-
 //
 // funciones de botones
 function addKey() {
@@ -68,13 +60,13 @@ function addKey() {
 }
 
 function delKey() {
-  delValue('clave');
+  document.getElementById('clave').value = '';
 }
 
 function delAllKeys() {
   claves = [];
   delKey();
-  delInnerHTML('claves');
+  document.getElementById('claves').innerHTML = '';
 }
 
 // botones event listeners
