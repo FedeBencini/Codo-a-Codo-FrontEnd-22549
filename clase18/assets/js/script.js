@@ -7,7 +7,7 @@ function getEl(x) {
 const btnAdd = getEl('btnAdd');
 const btnDel = getEl('btnDel');
 const btnDelAll = getEl('btnDelAll');
-let claves = [];
+const claves = [];
 
 // funciones de base
 function renderKeys() {
@@ -50,16 +50,26 @@ function addKey() {
   addToList(clave, claves)
   delKey();
   renderKeys();
+  focusInput();
 }
+
+function focusInput() {
+  getEl('clave').focus();
+};
+
 
 function delKey() {
   getEl('clave').value = '';
+  focusInput();
 }
 
 function delAllKeys() {
-  claves = [];
+  while (claves.length > 0) {
+    claves.pop();
+  }
   delKey();
   getEl('claves').innerHTML = '';
+  focusInput();
 }
 
 // botones event listeners
